@@ -1,0 +1,195 @@
+header{
+    padding: 20px 0;
+    background: #111111;
+}
+body{
+    height:100%;
+}
+
+.caja{
+    width: 940px;
+    position: relative; /*Es la posicion relativa a los elementos actuales*/
+    margin: 0 auto; /*Para poner margen de 0 arriba y abajo, pero que tenga el mismo margen en izquierda y derecha*/
+}
+
+.imgHeader{
+    display: inline-block;
+    filter: invert();
+}
+.imgHeader img{
+    width: 50%;
+}
+
+nav{
+    position: absolute; /*Por defecto está en static, pero en absolute se acomoda en cualquier lugar que se le indique, sin importar los demás elementos*/
+    top: 50px;
+    right: 0;
+}
+nav ul{
+    padding: 0;
+}
+nav li{
+    display: inline; /*Originalmente se acomodan como: display:block, es decir que ocupen el 100% del espacio*/
+    margin: 0 5px 0 5px; /*margen hacia arriba, derecha, abajo, izquierda*/
+    padding: 10px 27px;
+    /*border: solid white;
+    border-radius: 10px;*/
+    border-color: white;
+    border-width: 2px;
+    border-radius: 8px;
+    border-style: dashed;
+    background: black;
+    
+}
+
+nav a{
+    text-transform: uppercase; /*Para mayusculas*/
+    color: white;
+    font-weight: bold; /*Para negritas*/
+    font-size: 22px;
+    text-decoration: none; /*Para quitarle el subrayado del link*/
+    font-family: "Noto Serif KR", serif;/*cambia la fuente*/
+}
+main{
+    /*height: 67%;*/
+    margin: 8vh auto;
+}
+.productos{
+    width: 940px;
+    margin: auto;
+    padding: 50 0;
+    position: relative;
+    /* top: 10%; */
+}
+.productos li{
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    vertical-align: top;
+    margin: 0 1.5%;
+    padding: 30px 20px;
+    box-sizing: border-box; /*para definir un tamaño de caja de acuerdo a el tamaño ya definido*/
+    border: 2px dashed black; /*width style color*/
+    border-radius: 20px;
+}
+.productos img{
+    width:100%;
+}
+.productos h2{
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.producto-descripcion{
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.producto-precio{
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+footer{
+    width: 100%;
+    position: absolute;
+    /* bottom: 0; */
+    background: url(../imagenes/bg.jpg);
+    text-align: center;
+    padding: 20px 0;
+}
+footer img{
+    width: 80px;
+}
+.copyright{
+    font-size: 15px;
+    color: white;
+}
+
+nav li:hover{
+    filter: invert();
+}
+
+.productos li:hover{
+    background: black;
+    color: white;
+    border-color: white;
+}
+.productos li:hover img{
+    filter: invert();
+}
+.productos li:hover h2{
+    font-size: 33px;
+}
+
+.productos li:active{
+    border: solid red;
+}
+
+@media screen and (max-width:960px){
+    .caja{
+        width: auto;
+        margin-bottom: 1em;
+    }
+    .imgHeader{
+        display: block;
+        margin: 0 calc(95vw/2) 1em calc(95vw/2);
+        padding-bottom: 1em;
+    }
+    .imgHeader img{
+        width: 5vw;
+        /* margin: 0 calc(85% / 2) 20px calc(85% / 2); */
+    }
+    nav{
+        position: static;
+    }
+    nav ul{
+        display: flex;
+        justify-content: space-around;
+    }
+    .productos{
+        display: flex;
+        width: auto;
+    }
+    .productos li{
+        flex-grow: 1;
+    }
+}
+@media screen and (max-width:610px){
+    .caja{
+        width: auto;
+    }
+    .imgHeader{
+        display: block;
+        margin: 0 calc(90vw/2) 1em calc(90vw/2);
+    }
+    .imgHeader img{
+        width: 10vw;
+    }
+    nav{
+        position: static;
+    }
+    nav ul{
+        display: block;
+    }
+    nav li{
+        display: block;
+        margin: 10px 15%;
+    }
+    nav a{
+        text-align: center;
+    }
+    .productos{
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .productos li{
+        width: 60%;
+    }
+    main{
+        margin: 0;
+    }
+}

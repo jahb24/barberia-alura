@@ -1,0 +1,77 @@
+<html lang="es">
+    <head>
+        <meta charset="UTF-8"><!--Diccionario para reconocer que caracteres soporta el navegador-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--Para que se adapte a los dispositivos moviles tambien-->
+        <title>Barbería</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+
+        <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lobster&family=Noto+Serif+KR&display=swap" rel="stylesheet"><!--agrega una fuente desde google fonts-->
+        
+    </head>
+    <body>
+        <header><!--Encabezado-->
+            <div class="caja">
+                <h1 class="imgHeader"><img src="imagenes/logo.png" alt="logo"></h1>
+                <nav>
+                    <ul>
+                        <a href="../index.html"><li id="textoHeader">Principal</li></a>
+                        <a href="./productos/productos.html"><li id="textoHeader">Productos</li></a>
+                        <a href="./contacto/contacto.html"><li id="textoHeader">Contacto</li></a>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="banner">
+                <h1 class="titulo-barberia">Barbería Alura</h1>
+            </div>
+            
+            <!--<img src="banner/banner.jpg" alt="banner" class="banner">-->
+        
+            <section class="principal">
+                <h2 class="titulo-principal">Sobre la Barbería Alura</h2>
+            
+                <img src="imagenes/utensilios.jpg" alt="utensilios" class="utensilios">
+                <img src="imagenes/utensilios.jpg" alt="utensilios" class="utensilios-2">
+
+                <p>Ubicada en el corazón de la ciudad, la 
+                <strong>Barbería Alura</strong> trae para el mercado lo que hay de mejor para su cabello y barba. Fundada en 2020, la Barbería Alura ya es destaque en la ciudad y conquista nuevos clientes diariamente. </p>
+
+                <p id="mision"><em>Nuestra misión es: <strong>"Proporcionar autoestima y calidad de vida a nuestros clientes".</strong></em></p>
+                
+                <p>Ofrecemos profesionales experimentados que están constantemente observando los cambios y movimiento en el mundo de la moda, para así ofrecer a nuestros clientes las últimas tendencias. El atendimiento posee un padrón de excelencia y agilidad, garantizando calidad y satisfacción de nuestros clientes. </p>
+            </section>
+
+            <section class="mapa">
+                <h3 class="titulo-principal">Nuestra Ubicación</h3>
+                <p>Nuestro establecimiento está ubicado en el corazón de la ciudad</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.6864765679256!2d2.1202448768431705!3d41.38089597130054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a498f576297baf%3A0x44f65330fe1b04b9!2sSpotify%20Camp%20Nou!5e0!3m2!1ses!2smx!4v1709715069242!5m2!1ses!2smx" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> <!--para poner ventanas, o cualquier elemento gráfico (imagenes, videos, etc.)-->
+            </section>
+            
+            <section class="diferenciales">
+                <h3 class="titulo-principal">Diferenciales</h3>
+                <ul class="lista"><!--Unorder list-->
+                    <li class="items">Atención personalizada a los clientes</li>
+                    <li class="items">Espacio diferenciado</li>
+                    <li class="items">Localización</li>
+                    <li class="items">Profesionales calificados</li>
+                    <li class="items">Puntualidad</li>
+                    <li class="items">Limpieza</li>
+                </ul>
+                <!--<ol> Es una order list-->
+                <!--<img src="diferenciales.jpg" alt="diferenciales">-->
+            </section>
+
+            <section class="video">
+                <h3 class="titulo-principal">Video Ejemplo</h3>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/jpwr-mAy-s4?si=OBrpqFixmlVyDa-8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </section>
+        </main>
+        <footer>
+            <img src="imagenes/logo-blanco.png" alt="logo">
+            <p class="copyright">&copy Copyright Barbería Alura - 2024</p>
+            <!--Se puede usar el codigo de entidad en los textos para agregar caracteres especiales como (c)-->
+        </footer>
+    </body>
+</html>

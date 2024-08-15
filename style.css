@@ -1,0 +1,338 @@
+/*.abril-fatface-regular {
+    font-family: "Abril Fatface", serif;
+    font-weight: 400;
+    font-style: normal;
+} */ 
+
+header{
+    padding: 20px 0;
+    background: #111111;
+}
+
+.caja{
+    width: 940px;
+    position: relative; /*Es la posicion relativa a los elementos actuales*/
+    margin: 0 auto; /*Para poner margen de 0 arriba y abajo, pero que tenga el mismo margen en izquierda y derecha*/
+}
+
+.imgHeader{
+    display: inline-block;
+    filter: invert();
+}
+.imgHeader img{
+    width: 50%;
+}
+
+nav{
+    position: absolute; /*Por defecto está en static, pero en absolute se acomoda en cualquier lugar que se le indique, sin importar los demás elementos*/
+    top: 50px;
+    right: 0;
+}
+nav ul{
+    padding: 0;
+}
+nav li{
+    display: inline; /*Originalmente se acomodan como: display:block, es decir que ocupen el 100% del espacio*/
+    margin: 0 5px 0 5px; /*margen hacia arriba, derecha, abajo, izquierda*/
+    padding: 10px 27px;
+    /*border: solid white;
+    border-radius: 10px;*/
+    border-color: white;
+    border-width: 2px;
+    border-radius: 8px;
+    border-style: dashed;
+    background: black;
+    
+}
+
+nav a{
+    text-transform: uppercase; /*Para mayusculas*/
+    color: white;
+    font-weight: bold; /*Para negritas*/
+    font-size: 22px;
+    text-decoration: none; /*Para quitarle el subrayado del link*/
+    font-family: "Noto Serif KR", serif;/*cambia la fuente*/
+}
+body{
+    background: white;
+}
+
+.titulo-barberia{
+    text-align: center;
+    font-size: 4em;/*2 veces el tamaño por defecto*/
+    margin: 1.5em;
+    color: white;
+    font-weight: bolder;
+}
+
+.banner{
+    width: 90%;
+    margin: 2em 5%;
+    border-radius: 12px;
+    border-width: 3px;
+    border-style: dashed;
+    border-color: white;
+    background: url(banner/banner.jpg);
+}
+/*
+main > p{ /*Para que el estilo se aplique solo a los hijos de la etiqueta, en lugar de hijos, nietos...
+    background: red;
+    text-align: center;
+}
+
+img + p{/*Primer parrafo después de una imagen, en el mismo nivel
+    background: blue;
+}
+
+img ~ p{/*Para todos los parrafos después de una imagen
+    background: green;
+}
+
+.principal p:not(#mision){/*Para todos los parrafos, menos para el de id=mision
+    background: purple;
+}*/
+
+.principal{
+    /*background: rgb(255, 241, 220);*/
+    background: linear-gradient(white, rgb(255, 241, 220));
+    padding: 20px 10%;
+}
+
+.titulo-principal{
+    text-align: center;
+    font-size: 2em;/*2 veces el tamaño por defecto*/
+    margin: 0 0 1em;
+    clear: left; /*para limpiar las configuraciones desde la izquierda, como float: left*/
+    color: rgba(0,0,0,0.7);/*la "a" agrega la opacidad del texto*/
+    /*text-shadow: 2px 2px 10px white;/*Para agregar sombra al texto*/
+}
+
+.titulo-principal::first-letter{/*para cambiar solo la primera letra*/
+    font-weight: bold;
+}
+/*
+p::first-line{/*Para cambiar solo la primera fila de un parrafo
+    font-style: italic;
+}*/
+/*
+.titulo-principal::before{/*Para cambiar inicio o fin de un texto
+    content: "[";
+}*/
+/*
+.titulo-principal::after{
+    content: "]";
+}*/
+
+.utensilios{
+    width: 6%;
+    float:left;/*para poner el elemento como si flotara*/
+    margin: 0 20px;
+    filter: sepia();
+    border-radius: 8px;
+}
+
+.utensilios-2{
+    width: 6%;
+    float: right;
+    margin: 0 20px;
+    filter: grayscale();
+    border-radius: 8px;
+}
+
+.principal p{
+    text-align: center;
+    margin: 0 4em 1em 4em;
+}
+
+.principal strong{
+    /*color: rgb(255, 255, 0);*/
+    font-weight: bold;
+}
+
+/*em strong{/*combinacion de etiquetas
+    color: #ff0000;/*o color: red;
+}*/
+.principal em{
+    /*font-style: italic;*/
+    font-family: "Lobster", sans-serif;
+}
+
+#mision{
+    font-size: 20px;
+}
+
+.mapa{
+    padding: 20px;
+    background: linear-gradient(rgb(255, 241, 220), rgb(182, 149, 120));
+}
+.mapa p{
+    text-align: center;
+}
+.mapa iframe{
+    width: 60%;
+    margin: 1em 20%;
+    border-radius: 12px;
+}
+
+.diferenciales{
+    color: white;
+    background: linear-gradient(rgb(182, 149, 120), rgb(148, 121, 97));/*se puede poner deg 45 por ejemplo, para que el gradiente se haga con angulo de 45°
+    O poner despues de cada color un 50% para que ese color ocupe un 50% del gradiente*/
+    /*background: radial-gradient(); Esto es para poner un gradiente circular*/
+    padding: 20px;
+    text-align: center;
+}
+
+.items{
+    font-style: italic; /*El italico es cursiva*/
+    padding: 1em 0.5em;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: white;
+    border-width: 2px;
+    border-color: white;
+    border-style: dashed;
+    border-radius: 8px;
+    margin: 0.5em 0;
+    line-height: 1.5;
+}
+
+.items::before, .items::after{
+    content: "🌟";
+}
+
+.lista{
+    display: inline-block; /*Para que ocupe solo el espacio del contenido*/
+    vertical-align:top;/*Para alinear arriba*/
+    /*width: 60%;*/
+    /*margin-right: 15%;*/
+    text-align: center;
+    padding: 3% 12%;
+    /*margin: 0 5%;*/
+    background-image: url(diferenciales.jpg);
+    background-size: cover;/*para que la imagen cubra todo el contenedor*/
+    border-radius: 12px;
+    border-width: 2px;
+    border-style: dashed;
+    border-color: white;
+    opacity: 90%;/*Para ponerle cierta opacidad (dejar o no pasar luz)*/
+}
+/*
+.diferenciales img{
+    width: 50%;
+    margin: 2px 25%;
+}*/
+
+
+.video{
+    background: linear-gradient(rgb(148, 121, 97), rgb(97, 79, 64));
+    width: calc(90% - 10%);/*Para hacer calculos, en lugar de datos absolutos, se pueden hacer entre porcentajes, pixeles, etc...*/
+    padding: 2em 10%;
+    color: white;
+    /*box-shadow: inset 0 0 50px black; /*Para poner la sombra interna, desde el centro, con un alcance de 50px*/
+}
+.video iframe{
+    width: 100%;
+    height: 60%;
+    border-radius: 12px;
+    /*box-shadow: 0 10px 50px 10px black, 0 -10px 50px 10px white;/*sombra horizontal, sombra vertical, difuminacion, alcance de sombra, color
+    Por defecto la sombra horizontal se pone a la derecha y la vertical a la izquierda, con el negativo se puede cambiar
+    Y se pueden agregar varias sombras, separadas por una coma*/
+    box-shadow: inset 0 0 20px black;
+}
+
+footer{
+    width: 100%;
+    position: absolute;
+    /*bottom: 0;*/
+    background: url(../imagenes/bg.jpg);
+    text-align: center;
+    padding: 20px 0;
+}
+footer img{
+    width: 80px;
+}
+.copyright{
+    font-size: 15px;
+    color: white;
+}
+
+nav li:hover{
+    filter: invert();
+}
+/*nav a:hover{/*Capturar movimiento del mouse
+    color: red;
+    /*text-decoration: underline;
+}*/
+
+.items:hover{
+    background-color: black;
+    cursor:cell;
+}
+
+.items:first-child{/*para cambiarle una propiedad solo al ultimo item
+    con nth-child() se puede cambiar especificamente el elemento que queremos*/
+    font-size: 1.5em;
+}
+
+.lista:hover{
+    opacity: 1;
+    transition: 200ms;
+}
+
+/*Media Queries sirven para cambiar condiciones*/
+
+@media screen and (max-width:960px){/*Si es una pantalla hasta 480px...*/
+    .caja{
+        width: auto;
+        margin-bottom: 1em;
+    }
+    .imgHeader{
+        display: block;
+        margin: 0 calc(95vw/2) 1em calc(95vw/2);
+        padding-bottom: 1em;
+    }
+    .imgHeader img{
+        width: 5vw;
+        /* margin: 0 calc(85% / 2) 20px calc(85% / 2); */
+    }
+    nav{
+        position: static;
+    }
+    nav ul{
+        display: flex;
+        justify-content: space-around;
+    }
+}
+@media screen and (max-width:610px){
+    .caja{
+        width: auto;
+    }
+    .imgHeader{
+        display: block;
+        margin: 0 calc(90vw/2) 1em calc(90vw/2);
+    }
+    .imgHeader img{
+        width: 10vw;
+    }
+    nav{
+        position: static;
+    }
+    nav ul{
+        display: block;
+    }
+    nav li{
+        display: block;
+        margin: 10px 15%;
+    }
+    nav a{
+        text-align: center;
+    }
+    .mapa iframe{
+        width: 80%;
+        margin: 1em 10%;
+    }
+    .video iframe{
+        height: auto;
+    }
+}

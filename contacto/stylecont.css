@@ -1,0 +1,223 @@
+header{
+    padding: 20px 0;
+    background: #111111;
+}
+
+.caja{
+    width: 940px;
+    position: relative; /*Es la posicion relativa a los elementos actuales*/
+    margin: 0 auto; /*Para poner margen de 0 arriba y abajo, pero que tenga el mismo margen en izquierda y derecha*/
+}
+
+.imgHeader{
+    display: inline-block;
+    filter: invert();
+}
+.imgHeader img{
+    width: 50%;
+}
+
+nav{
+    position: absolute; /*Por defecto está en static, pero en absolute se acomoda en cualquier lugar que se le indique, sin importar los demás elementos*/
+    top: 50px;
+    right: 0;
+}
+nav ul{
+    padding: 0;
+}
+nav li{
+    display: inline; /*Originalmente se acomodan como: display:block, es decir que ocupen el 100% del espacio*/
+    margin: 0 5px 0 5px; /*margen hacia arriba, derecha, abajo, izquierda*/
+    padding: 10px 27px;
+    /*border: solid white;
+    border-radius: 10px;*/
+    border-color: white;
+    border-width: 2px;
+    border-radius: 8px;
+    border-style: dashed;
+    background: black;
+    
+}
+
+nav a{
+    text-transform: uppercase; /*Para mayusculas*/
+    color: white;
+    font-weight: bold; /*Para negritas*/
+    font-size: 22px;
+    text-decoration: none; /*Para quitarle el subrayado del link*/
+    font-family: "Noto Serif KR", serif;/*cambia la fuente*/
+}
+
+main{
+    width: 940px;
+    margin: 0 auto;
+}
+
+form{
+    margin: 40px 0;
+    text-align: center;
+}
+
+form label, form legend{
+    display: block;
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+.input-padron{
+    display: block;
+    margin: 0 auto 20px auto;
+    padding: 15px 15px;
+    width: 50%;
+    text-align: center;
+    border-width: 1px;
+    border-radius: 8px;
+    border-color: black;
+    border-style: dashed;
+}
+
+select{
+    width: 10%;
+    padding: 5px;
+    cursor: pointer;
+    text-align: center;
+    background: white;
+    border-radius: 8px;
+    border-color: black;
+    border-style: dashed;
+}
+
+.checkbox{
+    margin: 20px 0;
+}
+
+.enviar{
+    width: 40%;
+    padding: 15px;
+    border-radius: 8px;
+    border-color: black;
+    border-style:dashed;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    background: white;
+    transition: 0.2s; /*para que la transición entre las propiedades actuales y el hover sean más lentas*/
+    cursor: pointer;
+}
+
+table{
+    width: 50%;
+    margin: 5% auto;
+    text-align: center;
+}
+thead{
+    background: black;
+    color: white;
+    font-weight: bold;
+}
+td, th{
+    padding: 10px 20px;
+}
+
+footer{
+    width: 100%;
+    position: absolute;
+    /*bottom: 0;*/
+    background: url(../imagenes/bg.jpg);
+    text-align: center;
+    padding: 20px 0;
+}
+footer img{
+    width: 80px;
+}
+.copyright{
+    font-size: 15px;
+    color: white;
+}
+
+nav li:hover{
+    filter: invert();
+}
+
+.enviar:hover{
+    background: black;
+    color: white;
+    border-color: white;
+    transform: scale(1.1); /*para cambiar el tamaño del elemento
+    también se puede hacer: transform: rotate(70deg)
+    si se quieren hacer las transformaciones juntas se tienen que poner contiguas*/
+}
+
+@media screen and (max-width:960px){
+    main{
+        width: auto;
+    }
+    .caja{
+        width: auto;
+        margin-bottom: 1em;
+    }
+    .imgHeader{
+        display: block;
+        margin: 0 calc(95vw/2) 1em calc(95vw/2);
+        padding-bottom: 1em;
+    }
+    .imgHeader img{
+        width: 5vw;
+        /* margin: 0 calc(85% / 2) 20px calc(85% / 2); */
+    }
+    nav{
+        position: static;
+    }
+    nav ul{
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+/* @media screen and (max-width:480px){/*Si es una pantalla hasta 480px...
+    .caja{
+        width: auto;
+    }
+    .imgHeader{
+        display: block;
+    }
+    .imgHeader img{
+        width: 15%;
+        margin: 0 calc(85% / 2) 20px calc(85% / 2);
+    }
+    nav{
+        position: static;
+    }
+    nav li{
+        display: block;
+        margin: 10px 15%;
+    }
+    nav a{
+        text-align: center;
+    }
+} */
+@media screen and (max-width:610px){
+    .caja{
+        width: auto;
+    }
+    .imgHeader{
+        display: block;
+        margin: 0 calc(90vw/2) 1em calc(90vw/2);
+    }
+    .imgHeader img{
+        width: 10vw;
+    }
+    nav{
+        position: static;
+    }
+    nav ul{
+        display: block;
+    }
+    nav li{
+        display: block;
+        margin: 10px 15%;
+    }
+    nav a{
+        text-align: center;
+    }
+}
