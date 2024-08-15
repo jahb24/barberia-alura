@@ -245,7 +245,7 @@ footer{
     width: 100%;
     position: absolute;
     /*bottom: 0;*/
-    background: url(../imagenes/bg.jpg);
+    background: url(./imagenes/bg.jpg);
     text-align: center;
     padding: 20px 0;
 }
